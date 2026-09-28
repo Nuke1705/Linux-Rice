@@ -1,0 +1,87 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 42,
+
+    "margin-top": 8,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "spacing": 6,
+
+    "modules-left": [
+        "network",
+        "bluetooth",
+        "pulseaudio"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "cpu",
+        "memory",
+        "battery",
+        "clock"
+    ],
+
+    "network": {
+        "format-wifi": "󰤨  {essid}",
+        "format-ethernet": "󰈀  Ethernet",
+        "format-disconnected": "󰤭  Offline",
+        "tooltip": true,
+        "on-click": "nm-connection-editor"
+    },
+
+    "bluetooth": {
+        "format": "󰂯  {status}",
+        "format-connected": "󰂯  {device_alias}",
+        "format-disabled": "󰂲  Off",
+        "tooltip": true,
+        "on-click": "blueman-manager"
+    },
+
+    "pulseaudio": {
+        "format": "󰕾  {volume}%",
+        "format-muted": "󰖁  Muted",
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󰮯",
+            "default": "󰊠"
+        },
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "on-click": "activate"
+    },
+
+    "cpu": {
+        "format": "󰻠  {usage}%",
+        "interval": 2,
+        "tooltip": true
+    },
+
+    "memory": {
+        "format": "󰍛  {percentage}%",
+        "interval": 2,
+        "tooltip": true
+    },
+
+    "battery": {
+        "format": "󰁹  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-full": "󰁹  {capacity}%",
+        "tooltip": true
+    },
+
+    "clock": {
+        "format": "󰥔  {:%H:%M}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    }
+}
